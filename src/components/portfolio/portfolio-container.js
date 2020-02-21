@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
 import PortfolioItem from "./portfolioitem"
-import portfolioitem from './portfolioitem';
+
 
 export default class PortfolioContainer extends Component {
+    constructor() {
+        super()
+        console.log("Portfolio container have rendered")
+    }
     render() {
         return (
             <div>

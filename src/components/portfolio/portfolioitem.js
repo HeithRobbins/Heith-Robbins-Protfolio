@@ -1,5 +1,6 @@
 import React from 'react';
 
+// props are so we can pass data to compones 
 export default function(props) {
     return (
         <div>

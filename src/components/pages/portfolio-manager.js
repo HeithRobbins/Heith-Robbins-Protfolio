@@ -5,6 +5,7 @@ import PortfolioSidebarList from "../portfolio/portfolio-sidebar-list";
 import PortfolioForm from "../portfolio/portfolio-form";
 
 
+
 export default class PortfolioManager extends Component {
     constructor() {
         super()
@@ -19,9 +20,26 @@ export default class PortfolioManager extends Component {
     }
 
     handleDeleteClick(portfolioItem) {
-        console.log("handleDeleteClick", portfolioItem);
+        axios
+            .delete(
+                `https://heithrobbins.devcamp.space/portfolio/portfolio_items/${portfolioItem.id}`,
+                { withCredentials: true }
+            )
+            .then(response => {
+                this.setState({
+                    portfolioItems: this.state.portfolioItems.filter(item => {
+                        return item.id !== portfolioItem.id;
+                    })
+                });
+
+                return response.data;
+            })
+            .catch(error => {
+                console.log("handleDeleteClick error", error);
+            });
     }
     
+
     handleSuccessfulFormSubmission(portfolioItem) {
         this.setState({
                 portfolioItems: [portfolioItem].concat(this.state.portfolioItems)

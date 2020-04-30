@@ -128,7 +128,7 @@ export default class App extends Component {
                   />
               )}
               />
-              {this.state.loggedInStatus === "LOGGWS_IN"
+              {this.state.loggedInStatus === "LOGGED_IN"
               ? this.authorizedPages()
             : null}
               <Route

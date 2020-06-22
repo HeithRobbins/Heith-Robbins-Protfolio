@@ -31,6 +31,20 @@ export default function () {
 
                         <div className="text">Eagle Mountain, UT</div>
                     </div>
+                    <div className="bullet-point-group">
+                        <div className="icon">
+                            <FontAwesomeIcon icon="" />
+                        </div>
+
+                        <div className="text">https://github.com/HeithRobbins</div>
+                    </div>
+                    <div className="bullet-point-group">
+                        <div className="icon">
+                            <FontAwesomeIcon icon="" />
+                        </div>
+
+                        <div className="text">https://www.linkedin.com/in/heith-robbins-415aa36a/ </div>
+                    </div>
                 </div>
             </div>
         </div>
